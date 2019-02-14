@@ -1,0 +1,476 @@
+body {
+    /* background-color: rgb(126, 26, 131); */
+    background-color: white;
+    /* background-color: rgb(220,220,220); */
+  }
+  .App {
+    text-align: center;
+    min-height: 100vh;
+    /* border: 1px solid red; */
+  }
+
+
+.link-bar {
+    height: 1vw;
+    width: 15vw;
+    margin-top: 4vw;
+    list-style-type: none;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+
+
+  
+  .posterMask {
+    position: absolute;
+    height: 25vw;
+    width: 17vw;
+    margin-left: 1.2vw;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    z-index: 10;
+    /* background-color: red; */
+    background: linear-gradient(to bottom,rgba(20,20,20,0.8) 0,rgba(20,20,20,0.7) 20%,rgba(20,20,20,0.7) 29%,rgba(20,20,20,0.6) 50%,rgba(20,20,20,0.1) 88%,rgba(20,20,20,0) 100%);
+  }
+  .poster {
+    position: absolute;
+    margin-left: 1.2vw;
+    height: 25vw;
+    width: 17vw;
+  }
+  .movieSummary {
+    margin-left: 2vw;
+    margin-top: -1vw;
+    margin-bottom: 10vw;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 15;
+  
+  }
+  p {
+    /* padding: .5vw; */
+    margin: 0;
+    font-size: 11px;
+    color: #fff;
+    width: 16vw;
+    display: flex;
+    justify-content: flex-start;
+    line-height: 2vw;
+    flex-wrap: wrap;
+  }
+  .App-header {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    /* padding-top: 4vw; */
+    /* padding-top: 4vw; */
+  }
+  .inner {
+    display: flex;
+  }
+  .filter {
+    height: 80%;
+  }
+  input {
+    position: relative;
+    height: 100%;
+    width: 200px;
+    margin-right: 2.5vw;
+    font-size: 15px;
+    padding: 0vw;
+    padding-left: .5vw;
+    outline: none;
+    border-radius: 3px;
+    background-color: rgb(200, 200, 200);
+    color: black;
+  }
+  .navbar {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    height: 50px;
+    width: 100vw;
+    left: 0;
+    top: 0;
+    background-color: #24292e;
+    box-shadow: 0 .2rem .8rem DimGrey;
+    border: 1px solid rgba(128, 128, 128, 0.8);
+    z-index: 20;
+  }
+  .filterHdr {
+    display: flex;
+    flex-direction: row;
+    color: rgb(200, 200, 200);
+    margin-right: 1vw;
+    padding-top: .5vw;
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .listToggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2vw;
+    width: 5.5vw;
+    font-size: .9em;
+    color: rgb(200, 200, 200);
+    border: 1px solid rgba(128, 128, 128, 0.8);
+    margin-right: 1vw;
+  }
+  .boxWrapper {
+    display: flex;
+    flex-grow: .8;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    /* background-color: red; */
+    /* background-color: rgb(20, 20, 20); */
+    background-color: #f5f9fa;
+    /* background-color: azure; */
+    border: 5px solid white;
+    /* border: 5px solid rgb(126, 26, 131); */
+  }
+  .box {
+    font-family: sans-serif;
+    display: flex;
+    flex-grow: .7;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 400px;
+    min-width: 240px;
+    position: relative;
+    /* background-color: azure; */
+    /* background-color: #f5f9fa; */
+    background-color: #24292e0e;
+    /* background-color: #f0f0f0; */
+    color: #333;
+    /* border: 2px solid rgb(20, 20, 20); */
+    /* background-color: rgb(222, 242, 245); */
+    padding-left: 1.5vw;
+    /* padding-left: 3.5vw; */
+    margin: 1.3vw;
+  }
+  .list {
+    height: 23vw;
+    width: 18.3vw;
+    position: absolute;
+    background-color: #f5f9fa;
+    padding: 1vw 0;
+    top: 5vw;
+    right: 1vw;
+    box-shadow: 0 .2rem .8rem DimGrey;
+    border: 1px solid rgba(128, 128, 128, 0.8);
+    overflow-x: hidden;
+    overflow-y: scroll;
+    cursor: pointer;
+  }
+  .listItem {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    box-shadow: 0 .2rem .8rem DimGrey;
+    border: 1px solid rgba(128, 128, 128, 0.8);
+    margin: .5vw;
+    padding-left: 5%;
+    color: #333;
+    height: 3vw;
+  }
+   button {
+    margin-top: 1vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2vw;
+    width: 3.5vw;
+    border-radius: 3px;
+    margin-left: 2vw;
+    color: rgba(0, 0, 0, 0.6);
+    background-color: #dcdfdf;
+    cursor: pointer;
+    outline: none;
+    z-index: 15;
+   }
+   .submit {
+   margin-top: 3vw;
+   margin-left: 2vw;
+   width: 5.5vw;
+   font-weight: bold;
+   font-size: .85em;
+   background: rgb(200, 200, 200);
+   color: #333;
+   }
+   form {
+    position: fixed;
+    height: 5vw;
+    width: 5vw;
+    left: 35vw;
+    border-radius: 3px;
+    z-index: 35;
+   }
+   .profile-details-box {
+     /* display: none; */
+     position: fixed;
+     padding-top: 2vw;
+     height: 38vw;
+     width: 30vw;
+     top: 5vw;
+     display: flex;
+     flex-direction: column;
+     box-shadow: 0 .2rem .8rem DimGrey;
+     border: 1px solid rgba(128, 128, 128);
+     background-color: #24292e;
+   }
+   .filter_title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 2vw;
+    width: 25vw;
+    height: 3vw;
+    color: rgb(200, 200, 200);
+   }
+   .profile-details-box .filter {
+    margin-left: 2vw;
+    width: 25vw;
+    height: 2vw;
+    box-shadow: 0 .2rem .8rem DimGrey;
+    border: 1px solid rgba(128, 128, 128);
+   }
+   .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+   }
+   .modal-main {
+    position:fixed;
+    background: rgb(146, 143, 143);
+    width: 80%;
+    height: auto;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+  }
+  .display-block {
+    display: block;
+  }
+  
+  .display-none {
+    display: none;
+  }
+  .modalBtn {
+    display: flex;
+    height: 3vw;
+    width: 3vw;
+    background-color: aqua;
+  } 
+  
+  @media all and (max-width: 1181px) {
+      .App-header {
+        padding-top: 5vw;
+      }
+  }
+  @media all and (max-width: 1081px) {
+      .App-header {
+        padding-top: 6vw;
+      }
+  }
+  @media all and (max-width: 840px) {
+      input {
+        margin-right: 2vw;
+      }
+      p {
+        padding: 1vw;
+      }
+      .App-header {
+        padding-top: 8vw;
+      }
+      .box {
+        padding-left: 4vw;
+        margin: 1.3vw;
+      }
+      .boxWrapper {
+        flex-grow: .8;
+      }
+      /* .list {}
+      .listItem {} */
+   }
+   @media all and (max-width: 600px) {
+      .App-header {
+        padding-top: 10vw;
+      }
+      /* .list {}
+      .listItem {} */
+   }
+   @media all and (max-width: 500px) {
+      .App-header {
+        padding-top: 13vw;
+      }
+      p {
+        width: 70vw;
+        font-size: .8em;
+        line-height: 8vw;
+        margin-left: 10vw;
+      }
+      .movieSummary {
+        margin-top: -3vw;
+      }
+      .poster {
+        width: 70vw;
+        height: 100vw;
+        margin-left: -2vw;
+      }
+      .posterMask {
+        width: 70vw;
+        height: 100vw;
+        margin-left: -2vw;
+      }
+      .box {
+        align-items: center;
+        min-height: 450px;
+      }
+      .listToggle {
+        height: 8vw;
+        width: 22.5vw; 
+        font-size: 1.2em; 
+      }
+      button {
+        height: 9vw;
+        width: 17.5vw;
+        font-size: 1em;  
+        margin-left: 1vw;
+        margin-left: -47vw;
+        margin-top: 20vw;
+      }
+      .list {
+        width: 73vw;
+        height: 70vw;
+        margin-top: 10vw;
+        margin-right: 1vw;
+      }
+      .listItem {
+        height: 10vw;
+      }
+      .profile-details-box {
+        margin-top: 20vw;
+        margin-left: -31vw;
+        height: 140vw;
+        width: 90vw;
+      }
+      .filter_title {
+        width: 40vw;
+        height: 6vw;
+        margin-top: 5vw;
+    }
+      .profile-details-box .filter {
+        height: 7vw;
+        width: 85vw;
+      }
+      .filter_title {
+        width: 40vw;
+        margin-top: 6vw;
+        font-size: 1.1em;
+      }
+      .submit {
+        width: 20vw;
+        margin-top: 10vw;
+  
+      }
+   }
+   @media all and (max-width: 400px) {
+      input {
+        margin-right: 3.5vw;
+      }
+      p {
+        width: 70vw;
+        font-size: .7em;
+        line-height: 8vw;
+        margin-left: 5vw;
+      }
+      .movieSummary {
+        margin-top: -3vw;
+      }
+      .App-header {
+        padding-top: 15vw;
+      }
+      .box {
+        align-items: center;
+        min-width: 300px;
+      }
+      .boxWrapper {
+        flex-grow: .8;
+        flex-direction: column;
+      }
+      .poster {
+        width: 70vw;
+        height: 100vw;
+        margin-left: -1vw;
+      }
+      .posterMask {
+        width: 70vw;
+        height: 100vw;
+        margin-left: -1vw;
+      }
+      .listToggle {
+        height: 8vw;
+        width: 23.5vw;
+        font-size: 1.2em;  
+      }
+      button {
+        height: 9vw;
+        width: 17.5vw;  
+        margin-left: -48vw;
+        margin-top: 22vw;
+      }
+      .list {
+        width: 80vw;
+        height: 70vw;
+        margin-top: 8vw;
+        margin-right: 2vw;
+      }
+      .listItem {
+        height: 10vw;
+      }
+      .profile-details-box {
+        margin-top: 20vw;
+        margin-left: -31vw;
+        height: 140vw;
+        width: 90vw;
+      }
+      .filterHdr {
+          margin-right: 4vw;
+          margin-top: 1.5vw;
+      }
+      .filter_title {
+        width: 40vw;
+        height: 6vw;
+        margin-top: 6vw;
+        font-size: 1.1em;
+    }
+      .profile-details-box .filter {
+        height: 6vw;
+        width: 85vw;
+      }
+      .submit {
+        width: 20vw;
+        margin-top: 10vw;
+  
+      }
+    }
+    
