@@ -113,7 +113,7 @@ body {
   .filterHdr {
     display: flex;
     flex-direction: row;
-    color: rgb(200, 200, 200);
+    color: rgb(160, 159, 159);
     margin-right: 1vw;
     padding-top: .5vw;
     font-size: 1em;
@@ -454,7 +454,7 @@ body {
         width: 90vw;
       }
       .filterHdr {
-          margin-right: 4vw;
+          margin-right: 2vw;
           margin-top: 1.5vw;
       }
       .filter_title {
@@ -462,6 +462,9 @@ body {
         height: 6vw;
         margin-top: 6vw;
         font-size: 1.1em;
+    }
+    input {
+      padding-left: 2vw;
     }
       .profile-details-box .filter {
         height: 6vw;

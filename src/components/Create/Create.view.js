@@ -13,7 +13,7 @@ class Create extends Component {
     Runtime: '',
     Genre: '',
     Director: '',
-    // Poster: `http://www.omdbapi.com/?t=${movie}&apikey=becf9c0c`
+    // Poster: ''
   }
 
   updeate_form_state = event => {

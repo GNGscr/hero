@@ -22,7 +22,6 @@ export default class Filter extends Component {
 Filter.propTypes = {
     on_filter: PropTypes.func.isRequired,
     list_data: PropTypes.arrayOf(PropTypes.shape({
-        id: PropTypes.number.isRequired,
         Title: PropTypes.string.isRequired,
         Year: PropTypes.string.isRequired,
         Runtime: PropTypes.string.isRequired,
