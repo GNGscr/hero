@@ -36,12 +36,13 @@ export const fetchMovies = () => {
 	return function (dispatch) {
 
 		dispatch({ type: FETCHING_MOVIES })
-        // fetch('/static/data/MOCK_DATA.json')
+        
         // fetch('http://www.omdbapi.com/?t=bohemian+rhapsody&apikey=becf9c0c')
-        return Promise.all(movies.map(movie =>
-            fetch(`http://www.omdbapi.com/?t=${movie}&apikey=becf9c0c`)
-          )
-        )
+        return fetch('/static/data/MOCK_DATA.json')
+        // Promise.all(movies.map(movie =>
+        //     fetch(`http://www.omdbapi.com/?t=${movie}&apikey=becf9c0c`)
+        //   )
+        // )
         .then( res => res.json())
         .then( data => dispatch ({
             type: MOVIES_FETCHED,
